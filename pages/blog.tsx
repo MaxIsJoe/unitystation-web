@@ -52,7 +52,8 @@ const Blog: NextPage = () => {
                                 author={post.author}
                                 state={post.state}
                                 type={post.type}
-                            />
+                                socials_image={post.socials_image}
+                                summary={post.summary}/>
                         )
                     })}
                 </div>}

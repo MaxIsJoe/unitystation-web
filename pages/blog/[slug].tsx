@@ -43,6 +43,11 @@ const PostPage: NextPage<{title: string, socials_image: string, summary: string}
                     property='og:description'
                     content={trimSummary(props.summary)}
                 />
+                <meta
+                    key='og:image'
+                    property='og:image'
+                    content={props.socials_image}
+                />
             </Head>
 
             <main className={'pt-8 pb-16 lg:pt-16 lg:pb-24'}>
