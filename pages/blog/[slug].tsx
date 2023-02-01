@@ -6,6 +6,7 @@ import {useRouter} from 'next/router';
 import Head from "next/head";
 
 const trimSummary = (summary: string): string => {
+    if (!summary) return '';
     const appendToEnd = '...';
     const maxLength = 165;
     const trimmed = summary.substring(0, maxLength - appendToEnd.length);
