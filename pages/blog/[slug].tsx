@@ -5,7 +5,14 @@ import {BlogPost} from "../../types/blogPost";
 import {useRouter} from 'next/router';
 import Head from "next/head";
 
-const PostPage: NextPage = () => {
+const trimSummary = (summary: string): string => {
+    const appendToEnd = '...';
+    const maxLength = 165;
+    const trimmed = summary.substring(0, maxLength - appendToEnd.length);
+    return trimmed + appendToEnd;
+}
+
+const PostPage: NextPage<{title: string, socials_image: string, summary: string}> = (props) => {
     const router = useRouter();
     const {slug} = router.query;
     const [post, setPost] = useState({} as BlogPost);
@@ -20,21 +27,21 @@ const PostPage: NextPage = () => {
     return (
         <>
             <Head>
-                <title key={'title'}>Unitystation - {post?.title}</title>
+                <title key={'title'}>Unitystation - {props.title}</title>
                 <meta
                     key='description'
                     name='description'
-                    content='Read more about this interesting article on our blog!'
+                    content={trimSummary(props.summary)}
                 />
                 <meta
                     key='og:title'
                     property='og:title'
-                    content='Unitystation - A blog post'
+                    content={`Unitystation - ${props.title}`}
                 />
                 <meta
                     key='og:description'
                     property='og:description'
-                    content='Read more about this interesting article on our blog!'
+                    content={trimSummary(props.summary)}
                 />
             </Head>
 
@@ -49,12 +56,26 @@ const PostPage: NextPage = () => {
                         author={post.author}
                         state={post.state}
                         type={post.type}
-                    />}
+                        socials_image={post.socials_image}
+                        summary={post.summary}/>}
                 </div>
             </main>
         </>
-
     )
 }
 
 export default PostPage;
+
+async function getServerSideProps(context: any) {
+    const {slug} = context.query;
+    const res = await fetch(`https://changelog.unitystation.org/posts/${slug}`);
+    const post = await res.json();
+    const { title, socials_image, summary } = post;
+    return {
+        props: {
+            title,
+            socials_image,
+            summary
+        }
+    }
+}
