@@ -1,14 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
-        'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
+        'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}', "./pages/**/*.tsx", "./components/**/*.tsx"
     ],
     important: true, // Active dark mode on class basis
     darkMode: "class", i18n: {
         locales: ["en-US"], defaultLocale: "en-US",
-    },
-    purge: {
-        content: ["./pages/**/*.tsx", "./components/**/*.tsx"], // These options are passed through directly to PurgeCSS
     },
     theme: {
         extend: {
