@@ -26,7 +26,7 @@ const Post = (props: BlogPost) => {
             <article
                 className={'mx-auto w-full px-10 py-10 mb-8 format format-sm sm:format-base lg:format-lg format-invert bg-gray-900 bg-opacity-75'}>
                 <header className={'mb-4 lg:mb-6 not-format'}>
-                    <address className={'flex items-center mb-6 not-italic'}>
+                    <div className={'flex justify-between mb-6 not-italic'}>
                         <div className="inline-flex items-center mr-3 text-sm text-white">
                             <div>
                                 <Link href={`/blog/${slug}`}>
@@ -42,7 +42,10 @@ const Post = (props: BlogPost) => {
                                 </p>
                             </div>
                         </div>
-                    </address>
+                        <div className="inline-flex items-center">
+                            <Capsule text={textByType[type]!} colour={colourByType[type]!} />
+                        </div>
+                    </div>
                 </header>
                 <div className={'flex flex-col'}>
                     {!!sections && sections.map((section, index) => {
