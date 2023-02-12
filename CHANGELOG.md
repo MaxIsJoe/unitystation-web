@@ -1,3 +1,16 @@
+# [1.4.0](https://github.com/unitystation/unitystation-web/compare/v1.3.1...v1.4.0) (2023-02-12)
+
+
+### Bug Fixes
+
+* fix the word "in" being glued to the contributor's name ([#38](https://github.com/unitystation/unitystation-web/issues/38)) ([07e285a](https://github.com/unitystation/unitystation-web/commit/07e285a22d7a1e73004a41c33578c1e137b784a4))
+
+
+### Features
+
+* **blog:** added badge with blog post type ([b13a644](https://github.com/unitystation/unitystation-web/commit/b13a644c30313482e8a84ff24ebfbd33c7da725a))
+* **blog:** made each post title a link to the blog post itself. ([d0ccf16](https://github.com/unitystation/unitystation-web/commit/d0ccf16478ba9b9e6b6ad87961a0cef6d3191861))
+
 ## [1.3.1](https://github.com/unitystation/unitystation-web/compare/v1.3.0...v1.3.1) (2023-02-01)
 
 
