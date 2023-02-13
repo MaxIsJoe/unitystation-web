@@ -1,7 +1,7 @@
 import ChangeComponent from './ChangeComponent';
-import {Card} from 'flowbite-react';
 import Change from '../../types/change';
 import Build from '../../types/build';
+import Panel from "../uiLibrary/panel";
 
 
 const BuildComponent = (props: Build) => {
@@ -33,27 +33,21 @@ const BuildComponent = (props: Build) => {
             </li>
     }
     return (
-        <>
-            <br></br>
-            <div className={'max-w-xl min-w-sm'}>
-                <Card>
-                    <div className={'mb-4 flex justify-between'}>
-                        <h5 className="text-xl font-bold leading-none text-white">
-                            Build: {version_number}
-                        </h5>
-                        <h5 className="text-xl font-bold leading-none text-white">
-                            Date: {date_created}
-                        </h5>
-                    </div>
-                    <div className="flow-root">
-                        <ul className="divide-y divide-gray-700">
-                            {changesList}
-                        </ul>
-                    </div>
-                </Card>
+        <Panel>
+            <div className={'mb-4 flex justify-between'}>
+                <h5 className="text-xl font-bold leading-none text-white">
+                    Build: {version_number}
+                </h5>
+                <h5 className="text-xl font-bold leading-none text-white">
+                    Date: {date_created}
+                </h5>
             </div>
-            <br></br>
-        </>
+            <div className="flow-root">
+                <ul className="divide-y divide-gray-700">
+                    {changesList}
+                </ul>
+            </div>
+        </Panel>
     )
 };
 

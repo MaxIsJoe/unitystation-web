@@ -2,7 +2,6 @@ import '../styles/globals.css'
 import '../styles/ck-content.css'
 import type {AppProps} from 'next/app'
 import Background from '../components/background';
-import Container from '../components/layout/container';
 import Navigation from '../components/navigation';
 import {config} from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
@@ -36,10 +35,8 @@ function MyApp({Component, pageProps}: AppProps) {
             </Head>
             <Background>
                 <Clown></Clown>
-                <Container>
                     <Navigation/>
                     <Component {...pageProps} />
-                </Container>
             </Background>
         </>
     )

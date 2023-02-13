@@ -1,10 +1,10 @@
 import {NextPage} from 'next';
-import FlexPageContainer from '../components/layout/prefabs/flexPageContainer';
-import FluidMainContainer from '../components/layout/prefabs/fixedFluidFixed/fluidMainContainer';
 import ChangelogResultsPage from '../components/changelog/changelogResultsPage';
 import {AllChangesResponse} from '../types/allChangesResponse';
 import {useEffect, useState} from 'react';
 import Head from "next/head";
+import Container from "../components/uiLibrary/container";
+import PageHeading from "../components/uiLibrary/PageHeading";
 
 
 
@@ -56,23 +56,17 @@ const Changelog: NextPage = () => {
                     content="Find all the changes we have pushed to Unitystation here!"/>
                 <meta key="og:url" property="og:url" content="https://unitystation.org/changelog"/>
             </Head>
-            <FlexPageContainer>
-                <FluidMainContainer>
-                    <div className={'w-full flex flex-col items-center justify-center'}>
-                        <h1 className={'text-3xl font-bold text-center'}>Changelog</h1>
-                        <br/>
-                        <br/>
+            <Container>
+                <PageHeading isCentered>Changelog</PageHeading>
 
-                        <ChangelogResultsPage
-                            count={changelog.count}
-                            next={changelog.next}
-                            previous={changelog.previous}
-                            results={changelog.results}
-                            handleNextClicked={handleNextClicked}
-                            handlePrevClicked={handlePrevClicked}/>
-                    </div>
-                </FluidMainContainer>
-            </FlexPageContainer>
+                <ChangelogResultsPage
+                    count={changelog.count}
+                    next={changelog.next}
+                    previous={changelog.previous}
+                    results={changelog.results}
+                    handleNextClicked={handleNextClicked}
+                    handlePrevClicked={handlePrevClicked}/>
+            </Container>
         </>
     )
 }

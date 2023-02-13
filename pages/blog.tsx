@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import Post from "../components/blog/post";
 import {BlogPostsResponse} from "../types/blogPostsResponse";
 import Head from "next/head";
-
+import Container from "../components/uiLibrary/container";
 
 
 const Blog: NextPage = () => {
@@ -38,26 +38,24 @@ const Blog: NextPage = () => {
                     content='The Unitystation Blog is a place where we post about the development of Unitystation, our community, and other things related to the game!'
                 />
             </Head>
-            <main className={'pt-8 pb-16 lg:pt-16 lg:pb-24'}>
-                <div className={'flex px-4 mx-auto max-w-screen-xl '}>
+            <Container>
                     {!loading && <div>
-                    {posts.results.map((post) => {
-                        return (
-                            <Post
-                                key={post.slug}
-                                title={post.title}
-                                date_created={post.date_created}
-                                slug={post.slug}
-                                sections={post.sections}
-                                author={post.author}
-                                state={post.state}
-                                type={post.type}
-                            />
-                        )
-                    })}
-                </div>}
-                </div>
-            </main>
+                        {posts.results.map((post) => {
+                            return (
+                                <Post
+                                    key={post.slug}
+                                    title={post.title}
+                                    date_created={post.date_created}
+                                    slug={post.slug}
+                                    sections={post.sections}
+                                    author={post.author}
+                                    state={post.state}
+                                    type={post.type}
+                                />
+                            )
+                        })}
+                    </div>}
+            </Container>
         </>
     )
 }

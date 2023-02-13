@@ -4,6 +4,7 @@ import {toAgoTime} from "../../utils/timeUtils";
 import Link from "next/link";
 import Capsule from "../uiLibrary/capsule";
 import Dict = NodeJS.Dict;
+import Panel from "../uiLibrary/panel";
 
 const colourByType: Dict<string> = {
     'announcement': 'blue',
@@ -23,8 +24,7 @@ const Post = (props: BlogPost) => {
 
     return (
         <>
-            <article
-                className={'mx-auto w-full px-10 py-10 mb-8 format format-sm sm:format-base lg:format-lg format-invert bg-gray-900 bg-opacity-75'}>
+            <Panel>
                 <header className={'mb-4 lg:mb-6 not-format'}>
                     <div className={'flex justify-between mb-6 not-italic'}>
                         <div className="inline-flex items-center mr-3 text-sm text-white">
@@ -59,7 +59,7 @@ const Post = (props: BlogPost) => {
                     })
                     }
                 </div>
-            </article>
+            </Panel>
         </>
     )
 }
