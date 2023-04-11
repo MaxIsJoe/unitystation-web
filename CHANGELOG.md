@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/unitystation/unitystation-web/compare/v1.4.0...v1.5.0) (2023-04-11)
+
+
+### Features
+
+* adds infinite scrolling for blogposts ([cf7f45b](https://github.com/unitystation/unitystation-web/commit/cf7f45b1bbd32f4c0ce66b6e639f1fc205c7d879))
+
 # [1.4.0](https://github.com/unitystation/unitystation-web/compare/v1.3.1...v1.4.0) (2023-02-12)
 
 
