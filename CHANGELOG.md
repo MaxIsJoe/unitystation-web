@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/unitystation/unitystation-web/compare/v1.5.0...v1.6.0) (2023-04-22)
+
+
+### Features
+
+* properly display lists and embeded youtube videos ([d41256a](https://github.com/unitystation/unitystation-web/commit/d41256a4f23ba3f3a68993b29e32829d9d3030b9))
+
 # [1.5.0](https://github.com/unitystation/unitystation-web/compare/v1.4.0...v1.5.0) (2023-04-11)
 
 
