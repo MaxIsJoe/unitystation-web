@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/unitystation/unitystation-web/compare/v1.6.0...v1.7.0) (2023-05-11)
+
+
+### Features
+
+* separate dowload button from socials buttons and  add icon prop to buttons ([0f7b7f4](https://github.com/unitystation/unitystation-web/commit/0f7b7f4a07635adfbf040c5e184314e8cc6399af))
+
 # [1.6.0](https://github.com/unitystation/unitystation-web/compare/v1.5.0...v1.6.0) (2023-04-22)
 
 
