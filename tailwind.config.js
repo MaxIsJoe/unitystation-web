@@ -1,7 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
-        'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}', "./pages/**/*.tsx", "./components/**/*.tsx"
+        'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
+        "./pages/**/*.tsx",
+        './app/**/*.{js,ts,jsx,tsx,mdx}',
+        "./components/**/*.tsx"
     ],
     important: true, // Active dark mode on class basis
     darkMode: "class", i18n: {

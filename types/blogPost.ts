@@ -10,5 +10,7 @@ export interface BlogPost {
     date_created: Date,
     type: string,
     state: string,
+    socials_image: string,
+    summary: string,
     sections: BlogPostSection[],
 }
