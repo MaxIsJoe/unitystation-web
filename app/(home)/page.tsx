@@ -10,6 +10,7 @@ import ContactInformation from "./contactInformation";
 import FeaturesList, {FeatureData} from "./featuresList";
 import React from "react";
 import {RiGamepadLine, RiRefreshLine, RiRocket2Line, RiTeamLine} from "react-icons/ri";
+import HeroRandomImageClient from "./HeroRandomImageClient";
 
 const mainText = "Welcome to Unitystation!";
 const secondaryText = "Free and open-source remake of the cult classic Space Station 13, made in Unity Engine.";
@@ -56,11 +57,11 @@ const HomePage: () => Promise<JSX.Element> = async () => {
     return (
         <>
             <PageSection className="gap-16">
-                <div>
+                <HeroRandomImageClient>
                     <LandingText mainText={mainText} secondaryText={secondaryText}/>
                     <DownloadButtonClient/>
                     <LandingButtonsServer/>
-                </div>
+                </HeroRandomImageClient>
                 <FeaturesList features={features}/>
             </PageSection>
             <PageSection verticalCenter={false}>

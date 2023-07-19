@@ -5,7 +5,6 @@ function getUserPlatform(): string | undefined {
     const parser = new UAParser();
     const result = parser.getResult();
     const { os } = result;
-    console.log(result);
     let minifiedPlatform: string | undefined;
 
     switch (os.name?.toLowerCase()) {

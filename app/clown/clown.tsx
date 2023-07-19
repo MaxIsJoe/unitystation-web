@@ -57,7 +57,7 @@ const Clown = () => {
         if (timesClicked < 500) {
             return (
                 <picture>
-                    <img className={"clown-img"}
+                    <img className={"clown-img z-20"}
                          onClick={handleClick}
                          src="/clown/clown.png"
                          alt="me"
@@ -88,7 +88,7 @@ const Clown = () => {
     });
 
     return (
-        <div className={'-z-10'}>
+        <div>
             {renderTimesClicked()}
             <audio ref={audioRef} src={"/clown/bikehorn.ogg"}></audio>
             {renderClown()}

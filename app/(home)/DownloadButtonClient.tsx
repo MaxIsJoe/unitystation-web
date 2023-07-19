@@ -15,8 +15,8 @@ const DownloadButtonClient = () => {
     }, []);
 
     return (
-        <div className={'flex flex-wrap justify-center mt-8 gap-4'}>
-            <Button filled={true} text={'Download'} linkTo={downloadLink} iconRight={BiSolidDownload} />
+        <div className={'flex flex-col lg:flex-row justify-center mt-8 gap-4'}>
+            <Button className="shadow-2xl" filled={true} text={'Download'} linkTo={downloadLink} iconRight={BiSolidDownload} />
         </div>
     )
 }

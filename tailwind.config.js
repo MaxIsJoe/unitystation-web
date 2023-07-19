@@ -16,7 +16,11 @@ module.exports = {
                 center: true,
             },
             backgroundImage: {
-                "layer1" : "url('../public/background/layer1.png')",
+                "layer1": "url('../public/background/layer1.png')",
+            },
+            blur: {
+                'xs': '2px',
+                'xxs': '1px',
             }
         },
     },
