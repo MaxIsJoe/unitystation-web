@@ -3,6 +3,7 @@ import React from "react";
 import Clown from "./clown/clown";
 import {Metadata} from "next";
 import DefaultNavbar from "./common/defaultNavbar";
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
     title: 'Unitystation - The Space Station 13 Remake Made in Unity',
@@ -45,6 +46,7 @@ export default function RootLayout({children,}: { children: React.ReactNode; }) 
             <Clown/>
             <DefaultNavbar/>
             {children}
+            <Analytics />
         </body>
         </html>
     )
